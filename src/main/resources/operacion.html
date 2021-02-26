@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+           <title>NanoSpark</title>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+             <script src="Busqueda.js"></script>
+           <link rel="stylesheet" href="styles/style.css">
+        <style>
+            body {
+                background-image: url('fondo2.jpg');
+            }
+        </style>
+    </head>
+    <body>
+        <font color="#00000" face="Comic Sans MS">
+            <h2>PRUEBA SERVIDOR WEB CON INGRESO DE DATOS</h2>
+                <Label for="Nombre">Nombre</Label>
+                <input id="Nombre" type="text" placeholder="Guillermo">
+                <Label for="Edad">Edad</Label>
+                <input id="Edad" type="int" placeholder="21">
+                <br>
+                <br>
+                <button onclick="Busqueda.insertar(),location.reload();"> Salvar</button>
+                <button onclick="Busqueda.GuardarBusqueda()"> VerBusqueda</button>
+                <nav>
+                    <ul id="Busqueda">
+                    </ul>
+                </nav>
+                <button onclick="location.reload();">Clear</button>
+        </font>
+    </body>
+</html>
