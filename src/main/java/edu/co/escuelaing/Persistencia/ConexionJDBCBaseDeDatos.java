@@ -67,7 +67,7 @@ public class ConexionJDBCBaseDeDatos {
             conexion.setAutoCommit(false);
             Estado = conexion.createStatement();
             String sql = "INSERT INTO PRUEBA(Nombre,Descripcion) "
-                    + "VALUES ('"+nombre+"',"+descripcion+");";
+                    + "VALUES ('"+nombre+"','"+descripcion+"');";
             Estado.executeUpdate(sql);
             Estado.close();
             conexion.commit();

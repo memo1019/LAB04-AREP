@@ -10,15 +10,23 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * @Author Luis Benavidez con modificacion de Guillermo Castro
+ * */
 public class NanoSpringApplication implements Handler<String> {
 
     private static NanoSpringApplication _instance = new NanoSpringApplication();
     private boolean componentLoaded = false;
     private Map<String,Method> componentsRoutes = new HashMap();
-
+    /**
+     * @Author Luis Benavidez con modificacion de Guillermo Castro
+     * */
     private NanoSpringApplication(){}
-
+    /**
+     *
+     * Se corre el servidor web y se instancia el proceso
+     * @param arg
+     * */
     public static void run(String[] arg) throws ClassNotFoundException, IOException {
         if (!_instance.componentLoaded){
             _instance.loadComponents(arg);
@@ -26,12 +34,19 @@ public class NanoSpringApplication implements Handler<String> {
             _instance.startServer();
         }
     }
-
+    /**
+     * se inicia el servidor web ya creado
+     * */
     private void startServer() throws IOException {
         HttpServer hserver = new HttpServer();
         hserver.registerHandler(this,"/nspapp");
         hserver.startServer();
     }
+    /**
+     * se encarga de cargar los componentes que ingresan de la clase run
+     * @param components
+     *
+     * */
 
     private void loadComponents(String[] components) throws ClassNotFoundException {
         for(String classpath:components) {
@@ -42,6 +57,14 @@ public class NanoSpringApplication implements Handler<String> {
             }
         }
     }
+    /***
+     * Se crea apartir de la implementacion de la clase Handle creada para la peticion y respuesta
+     * @param path
+     * @param req
+     * @param res
+     * @return String
+     */
+
     @Override
     public String Handle(String path, HttpRequest req, HttpResponse res) {
         if(componentsRoutes.containsKey(path)){
@@ -67,6 +90,12 @@ public class NanoSpringApplication implements Handler<String> {
 
 
 
+    /**
+     * invoca el metodo mediante la reflexion
+     * @param StatictMethod
+     * @return String
+     *
+     * */
     public static String Invoke(Method StatictMethod) {
         String resp="";
         try{
@@ -77,5 +106,4 @@ public class NanoSpringApplication implements Handler<String> {
         }
         return resp;
     }
-
 }

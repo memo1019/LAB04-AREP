@@ -17,11 +17,19 @@ public class HttpServer {
     public HttpServer(){
         super();
     }
+    /**
+     * se guarda el path, con su respectiva respuesta
+     * @param h
+     * @param prefix
+     * */
     public void registerHandler(Handler<String> h , String prefix){
         Handlers.put(prefix,h);
         System.out.println("Adding handler with key: "+prefix);
     }
-
+    /**
+     * el metodo principal en el cual veremos las respuesta dadas
+     * @throws IOException
+     */
     public void startServer() throws IOException {
         ServerSocket serverSocket = null;
         try {
@@ -106,7 +114,10 @@ public class HttpServer {
         }
         serverSocket.close();
     }
-
+    /**
+     * Resultado en caso de tener un resultado inexistente
+     * @return String
+     */
     private String getDefaultOkOutput(){
         return "HTTP/1.1 200 OK\r\n"
                 + "Content-Type: text/html\r\n"

@@ -1,0 +1,22 @@
+--class-path
+'C:/Users/admin/.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar;C:/Users/admin/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar;C:/Users/admin/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/admin/Downloads/AREP/LAB04-AREP/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/admin/Downloads/AREP/LAB04-AREP/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'NanoSparkWeb 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'NanoSparkWeb 1.0-SNAPSHOT API'
