@@ -35,7 +35,7 @@ public class ConexionJDBCBaseDeDatos {
         List<Prueba> Pruebas = new ArrayList<>();
         try {
             DriverManager.registerDriver(new org.postgresql.Driver());
-            conexion = DriverManager.getConnection("jdbc:postgresql://ec2-54-237-143-127.compute-1.amazonaws.com:5432/d2jllscpeuch14", "lmdsycuavxahau", "e8e14a60753485abd455821df65bbaad85a7ac42ea715c84957bff640a5bf49f");
+            conexion = DriverManager.getConnection("jdbc:postgresql://ec2-54-242-43-231.compute-1.amazonaws.com:5432/d7k5ebt8vo546h", "iqugxjjflyecxa", "d5b2bb3e476769ec2d55dbdea9ec44d18ac75b8d6747932c9334d2228fd2de8e");
             conexion.setAutoCommit(false);
             Estado = conexion.createStatement();
             ResultSet rs = Estado.executeQuery( "SELECT * FROM PRUEBA;" );
@@ -61,11 +61,9 @@ public class ConexionJDBCBaseDeDatos {
      *
      * */
     public static void Insertar(String nombre,String descripcion) {
-
-
         try {
             DriverManager.registerDriver(new org.postgresql.Driver());
-            conexion = DriverManager.getConnection("jdbc:postgresql://ec2-54-237-143-127.compute-1.amazonaws.com:5432/d2jllscpeuch14", "lmdsycuavxahau", "e8e14a60753485abd455821df65bbaad85a7ac42ea715c84957bff640a5bf49f");
+            conexion = DriverManager.getConnection("jdbc:postgresql://ec2-54-242-43-231.compute-1.amazonaws.com:5432/d7k5ebt8vo546h", "iqugxjjflyecxa", "d5b2bb3e476769ec2d55dbdea9ec44d18ac75b8d6747932c9334d2228fd2de8e");
             conexion.setAutoCommit(false);
             Estado = conexion.createStatement();
             String sql = "INSERT INTO PRUEBA (Nombre,Descripcion) "
