@@ -66,9 +66,9 @@ public class HttpServer {
                     break;
                 }
             }
-            if(path.contains("/nsapp")) {
+            if(path.contains("/nspapp")) {
                 String sufix = path.split("/")[2];
-                out.println(Handlers.get("/Apps").Handle("/" + sufix, null, null));
+                out.println(Handlers.get("/nspapp").Handle("/" + sufix, null, null));
             }else if (path.contains("/escuelaing")){
                 ResReqStatic.setCurrentDir("/");
                 String resource = null;
@@ -85,7 +85,7 @@ public class HttpServer {
                     resource = "Prueba.js";
                     type = "javascript";
                 }
-                if (path.contains("fondo2.png")) {
+                if (path.contains(".png")) {
                     try {
                         ResReqStatic.getWebFile(clientSocket,resource,0);
                     }catch(FileNotFoundException e){

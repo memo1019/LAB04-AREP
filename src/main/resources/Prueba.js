@@ -2,7 +2,7 @@ Prueba = (function () {
 
     function GuardarPrueba(){
         var promise = $.get({
-            url: "/Apps/Prueba",
+            url: "/nspapp/Prueba",
             contentType: "application/json"
         });
         promise.then(function(data){
@@ -26,7 +26,7 @@ Prueba = (function () {
         var name = $("#Nombre").val()
         var desc = $("#Descripcion").val()
         var promise = $.get({
-            url: "/Apps/insertar",
+            url: "/nspapp/insertar",
             data: JSON.stringify(name+"!"+desc),
             contentType: "application/json"
         });
