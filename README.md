@@ -1,6 +1,6 @@
 # AREP LABORATORIO 4 - TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
 
-se realizo el Aplicativo Web diseñado en Java con el objetivo de crear un servidor HTTP, y un framework que reemplace al framework Spark, este servidor soporta peticiones get por medio de funciones lambda, para esta aplicación el servidor devuelve archivos estáticos para ser visualizados por el usuario.
+se realizo el Aplicativo Web diseñado en Java con el objetivo de crear un servidor HTTP,creado en el anterior laboratorio y un framework que simule algunas de las funciones del framework Spring, este servidor acepta peticiones get que son mapeadas haciendo uso de anotaciones en los metodos y luego estos son creados mediante reflexión y patrones IOC, para esta aplicación el servidor devuelve archivos estáticos para ser visualizados por el usuario.
 
 ### PREREQUISITOS
 
