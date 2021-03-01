@@ -37,7 +37,7 @@ las podra ver corriendo con el comando
 Para correr el programa tenemos que ejecutar el siguiente comando :
 
 ```
->java -cp target/classes;target/dependency/* edu.co.escuelaing.nanospring.demo.Application
+java -cp target/classes;target/dependency/* edu.co.escuelaing.nanospring.demo.Application
 ```
 Luego vaya a http://localhost:4567/escuelaing/operacion.html para ver el programa desplegado localmente
 
@@ -82,6 +82,6 @@ Podemos ver la descripcion del proyecto en este pdf [file](/lab4.pdf) mostrando 
 
 * **Guillermo Alfonso Castro Camelo** - [Memo1019](https://github.com/memo1019)
 
-## Licensia
+## Licencia
 
 This project is licensed under the GNU v3.0 License - see the [LICENSE](LICENSE.txt) file for details
