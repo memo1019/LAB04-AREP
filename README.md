@@ -37,9 +37,9 @@ las podra ver corriendo con el comando
 Para correr el programa tenemos que ejecutar el siguiente comando :
 
 ```
->java -cp target/classes;target/dependency/* edu.co.escuelaing.nanosparkweb.demo.NanoSparkWebDemo
+>java -cp target/classes;target/dependency/* edu.co.escuelaing.nanospring.demo.Application
 ```
-Luego vaya a http://localhost:4567/arep/operacion.html para ver el programa desplegado localmente
+Luego vaya a http://localhost:4567/escuelaing/operacion.html para ver el programa desplegado localmente
 
 
 La aplicación se despliega con heroku y el enlace está en la parte inferior de este documento (botón Heroku)
@@ -65,7 +65,7 @@ si desea ver el javadoc se encuentra en el directorio
 /target/site
 ```
 
-Podemos ver la descripcion del proyecto en este pdf [file](/src/site/Resources/lab3.pdf) mostrando el diseño y la estructura del proyecto
+Podemos ver la descripcion del proyecto en este pdf [file](/lab4.pdf) mostrando el diseño y la estructura del proyecto
 
 ## Construido con
 
@@ -75,7 +75,7 @@ Podemos ver la descripcion del proyecto en este pdf [file](/src/site/Resources/l
 
 ## Despliegue en Heroku
 
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://shielded-fjord-72615.herokuapp.com/escuelaing/operacion.html)
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://lab04-arep.herokuapp.com/escuelaing/operacion.html)
 
 
 ## Autor
