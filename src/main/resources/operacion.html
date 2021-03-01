@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
            <title>NanoSpark</title>
            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-             <script src="Busqueda.js"></script>
+             <script src="Prueba.js"></script>
            <link rel="stylesheet" href="styles/style.css">
         <style>
             body {
@@ -16,15 +16,15 @@
         <font color="#00000" face="Comic Sans MS">
             <h2>PRUEBA SERVIDOR WEB CON INGRESO DE DATOS</h2>
                 <Label for="Nombre">Nombre</Label>
-                <input id="Nombre" type="text" placeholder="Guillermo">
-                <Label for="Edad">Edad</Label>
-                <input id="Edad" type="int" placeholder="21">
+                <input id="Nombre" type="text" placeholder="Prueba 1">
+                <Label for="Descripcion">Descripcion</Label>
+                <input id="Descripcion" type="text" placeholder="La prueba fue realizada de forma correcta">
                 <br>
                 <br>
-                <button onclick="Busqueda.insertar(),location.reload();"> Salvar</button>
-                <button onclick="Busqueda.GuardarBusqueda()"> VerBusqueda</button>
+                <button onclick="Prueba.insertar(),location.reload();"> Salvar</button>
+                <button onclick="Prueba.GuardarPrueba()"> VerPrueba</button>
                 <nav>
-                    <ul id="Busqueda">
+                    <ul id="Prueba">
                     </ul>
                 </nav>
                 <button onclick="location.reload();">Clear</button>

@@ -1,21 +1,21 @@
-Busqueda = (function () {
+Prueba = (function () {
 
-    function GuardarBusqueda(){
+    function GuardarPrueba(){
         var promise = $.get({
-            url: "/Apps/Busqueda",
+            url: "/Apps/Prueba",
             contentType: "application/json"
         });
         promise.then(function(data){
-            VistaBusqueda(data);
+            VistaPrueba(data);
         }, function(error) {
             console.log(22);
         });
     }
 
-    function VistaBusqueda(data){
+    function VistaPrueba(data){
         for (let i = 0; i < data.split("%").length; i++) {
             data.split("%")[i].split("#");
-            $("#Busqueda").append("<li class='temporal'>"+data.split("%")[i].split("#")[0]+" "+data.split("%")[i].split("#")[1])
+            $("#Prueba").append("<li class='temporal'>"+data.split("%")[i].split("#")[0]+" "+data.split("%")[i].split("#")[1])
         }
 
     }
@@ -24,10 +24,10 @@ Busqueda = (function () {
 
     function insertar(){
         var name = $("#Nombre").val()
-        var num = $("#Edad").val()
+        var desc = $("#Descripcion").val()
         var promise = $.get({
             url: "/Apps/insertar",
-            data: JSON.stringify(name+"!"+num),
+            data: JSON.stringify(name+"!"+desc),
             contentType: "application/json"
         });
         promise.then(function(data){
@@ -38,7 +38,7 @@ Busqueda = (function () {
     }
 
     return{
-        GuardarBusqueda:GuardarBusqueda,
+        GuardarPrueba:GuardarPrueba,
         insertar:insertar
     }
 })();

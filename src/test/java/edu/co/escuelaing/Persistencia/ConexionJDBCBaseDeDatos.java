@@ -1,6 +1,6 @@
 package edu.co.escuelaing.Persistencia;
 
-import edu.co.escuelaing.entidades.Busqueda;
+import edu.co.escuelaing.entidades.Prueba;
 import org.junit.Test;
 
 import java.sql.SQLException;

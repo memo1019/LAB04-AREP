@@ -55,9 +55,9 @@ public class HttpServer {
 
                         String name = path.split("%22")[1].split("!")[0];
 
-                        int num = Integer.parseInt(path.split("%22")[1].split("!")[1]);
+                        String desc = path.split("%22")[1].split("!")[1];
 
-                        ConexionJDBCBaseDeDatos.getInstance().Insertar(name,num);
+                        ConexionJDBCBaseDeDatos.getInstance().Insertar(name,desc);
                     }
                     pathRead=true;
                 }
@@ -66,7 +66,7 @@ public class HttpServer {
                     break;
                 }
             }
-            if(path.contains("/Apps")) {
+            if(path.contains("/nsapp")) {
                 String sufix = path.split("/")[2];
                 out.println(Handlers.get("/Apps").Handle("/" + sufix, null, null));
             }else if (path.contains("/escuelaing")){
@@ -82,10 +82,10 @@ public class HttpServer {
                     type = "css";
                 }
                 if (path.contains(".js")){
-                    resource = "Busqueda.js";
+                    resource = "Prueba.js";
                     type = "javascript";
                 }
-                if (path.contains(".png")) {
+                if (path.contains("fondo2.png")) {
                     try {
                         ResReqStatic.getWebFile(clientSocket,resource,0);
                     }catch(FileNotFoundException e){
