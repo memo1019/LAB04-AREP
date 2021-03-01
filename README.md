@@ -1,4 +1,4 @@
-# AREP LABORATORIO 3 - TALLER CLIENTES Y SERVICIOS
+# AREP LABORATORIO 4 - TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
 
 se realizo el Aplicativo Web diseñado en Java con el objetivo de crear un servidor HTTP, y un framework que reemplace al framework Spark, este servidor soporta peticiones get por medio de funciones lambda, para esta aplicación el servidor devuelve archivos estáticos para ser visualizados por el usuario.
 
@@ -15,11 +15,11 @@ Los prerrequisitos que manejaremos para lograr con exito el desarrollo del labor
 se debe clonar el proyecto con el siguiente comando:
 
 ```
-git clone https://github.com/memo1019/LAB3-AREP
+git clone https://github.com/memo1019/LAB04-AREP
 ```
 luego ingresaremos a la carpeta dede el cmd o la consola:
 ```
-cd /Lab03-AREP
+cd /Lab04-AREP
 ```
 Finalmente coonstruiremos y compilaremos el proyecto para asi poder ejecutarlo.
 ```
